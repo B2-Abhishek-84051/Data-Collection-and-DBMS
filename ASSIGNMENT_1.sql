@@ -43,10 +43,11 @@ CHAR(6), weight SMALLINT , city CHAR(15));
 Query OK, 0 rows affected (1.22 sec)
 
 INSERT INTO P VALUES('P1',"Nut","Red",12,"London"),
-('P2','Bolt','Green',12,'London'),
+('P2','Bolt','Green',17,'London'),
 ('P3','Screw','Blue',17,'Paris'),
-('P2','Bolt','Green',12,'London'),
-('P3','Screw','Blue',17,'Paris');
+('P4','Screw','Red',14,'London'),
+('P5','Cam','Blue',12,'Paris'),
+('P6','Cog','Red',19,'London'); 
 Query OK, 5 rows affected (0.36 sec)
 Records: 5  Duplicates: 0  Warnings: 0
 
