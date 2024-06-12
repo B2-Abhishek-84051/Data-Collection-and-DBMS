@@ -299,13 +299,16 @@ select * from v_londonCustomers;
 +------+---------+--------+--------+------+
 2 rows in set (0.00 sec)
 
-select * from salespeople where snum = ANY(select snum from v_londonCustomers);
-+------+-------+--------+------+
-| snum | sname | city   | comm |
-+------+-------+--------+------+
-| 1001 | Peel  | London | 0.12 |
-+------+-------+--------+------+
-1 row in set (0.01 sec)
+select * from orders where snum = ANY(SELECT snum from customers where city = "London");
++------+---------+------------+------+------+
+| onum | amt     | odate      | cnum | snum |
++------+---------+------------+------+------+
+| 3003 |  767.19 | 1990-10-03 | 2001 | 1001 |
+| 3008 | 4723.00 | 1990-10-04 | 2006 | 1001 |
+| 3011 | 9891.88 | 1990-10-04 | 2006 | 1001 |
++------+---------+------------+------+------+
+3 rows in set (0.00 sec)
+
 
 -- 9. Find names and numbers of all salesperson who have more than one customer.
 
