@@ -1,0 +1,91 @@
+
+
+//first name=sanju and last_name=pawar
+db.Person.insert({
+	"first_name":"sanju",
+	"last_name":"pawar"
+})
+
+
+//name=sujay    age= 56   married=true  
+db.Person.insert({
+	"name":"sujay",
+	"age":56,
+	"married":"true"
+})
+
+
+//Language  is array of C++, JAVA Python,Kotlin,Go
+db.Languages.insert({
+	"Language":["C++","JAVA","Python","Kotlin","Go"]
+})
+
+//list the days in week in array =>Sunday Monday Tuesday Wednesday Thursday Friday Saturday
+db.week.insert({"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]})
+
+
+//name=sujay    age= 56   married=true  mobile= 1234543221, 87654389365 
+db.Person4.insert({"name":"sujay","age":56,"married":"true","mobile":[1234543221, 87654389365]})
+
+//name=sujay    age= 56   married=true  contact=> mobile=9887667767 email=sujay@yahoo.com
+db.person5.insert({"name":"sujay","age":56,"married":"true","contact":[{"mobile":9887667767,"email":"sujay@yahoo.com"}]})
+
+//create 3 emp
+//name=sujay    age= 56   married=true  contact=> mobile=9887667767 email=sujay67@yahoo.com
+//name=vijay    age= 44   married=true  contact=> mobile=9885555567 email=vijay99@yahoo.com
+//name=ajay    age= 28   married=false  contact=> mobile=921267767 email=ajay12@yahoo.com
+
+db.emp.insertMany([
+	{
+		"name":"sujay",
+		"age": 56,
+		"married":true,
+		"contact":{"mobile":9887667767,"email":"sujay67@yahoo.com"}
+	},
+	{
+		"name":"vijay",
+		"age": 44,
+		"married":true,
+		"contact":{"mobile":9885555567,"email":"vijay99@yahoo.com"}
+	},
+	{
+		"name":"ajay",
+		"age": 28,
+		"married":false,
+		"contact":{"mobile":921267767,"email":"ajay12@yahoo.com"}
+	}
+])
+
+//StudName	Std	 Marks	                Favorite Sports
+// Aayush	5	Sci=33, Eng=25, Math=15	Football, Yoga
+// Aarit	8	Sci=50, Eng=48, Math=41	Football, Basketball
+// Jayesh	7	Sci=32, Eng=28, Math=14	Basketball, Cricket
+// Satyam	8	Sci=56, Eng=47, Math=43	Basketball, Martial Arts
+
+db.student.insertMany([
+	{
+	"studName":"Aayush",
+	"std":5,
+	"Marks":[{"Sci":33,"Eng":25,"Math":15}],
+	"fav_sports":["Football","Yoga"]
+	},
+	{
+	"studName":"Aarit",
+	"std":8,
+	"Marks":[{"Sci":50,"Eng":48,"Math":41}],
+	"fav_sports":["Football","Basketball"]
+	},
+	{
+	"studName":"Jayesh",
+	"std":7,
+	"Marks":[{"Sci":32,"Eng":28,"Math":14}],
+	"fav_sports":["Basketball","Cricket"]
+	},
+	{
+	"studName":"Satyam",
+	"std":8,
+	"Marks":[{"Sci":56,"Eng":47,"Math":43}],
+	"fav_sports":["Basketball","Martial"]
+	}
+])
+
